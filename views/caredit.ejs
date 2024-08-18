@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <%- include('../partials/nav') %>
-    <a href="/cars"?_method="PUT"><button>Go Back</button></a>
+    <div class = "nav"><%- include('../partials/nav') %></div>
+    <a href="/cars"?_method="PUT"><button class = "but2" >Go Back</button></a>
 
 
     <form method="POST" action="/cars/<%= x._id %>?_method=PUT">
@@ -59,7 +59,7 @@
 
 
     <form method="POST" action="/cars/<%= x._id %>?_method=DELETE">
-        <input value="Delete" type="submit">
+        <input class = "but" value="Delete" type="submit">
     </form>
 </body>
 </html>

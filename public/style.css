@@ -38,4 +38,9 @@ body{
     gap: 25px;
     color: gainsboro;
 }
-
+.but{
+    margin-top: 10px;
+}
+.but2{
+    margin-bottom: 10px;
+}
