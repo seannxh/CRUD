@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Listings</title>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+<body>
+    <div class = "nav"><%- include('../partials/nav') %></div>
+    <h1 class = "header">CAR LISTINGS</h1>
+    <a class = "button" href="/cars/new"><button>Create New Listing</button></a>
+    <% y.forEach(car => { %>
+        <div class = "show">
+            <a href="/cars/<%=car._id%>"><h1><%= car.carName%></h1></a>
+            <p>Brand: <%= car.carBrand %></p>
+            <p>Year: <%= car.carYear %></p>
+            <p>Trim: <%= car.carTrim %></p>
+            <p>Mileage: <%= car.carMileage%></p>
+            <p>Aftermarket: <%= car.Aftermarket ? 'Yes' : 'No' %></p>
+            <p>Price: $<%=car.price%></p>
+            <img class = "picture"src="<%= car.imageUrl %>" alt="<%= car.carBrand %> Image" style="max-width: 500px; height: auto;">
+        </div>
+    <% }); %>
+
+</body>
+</html>

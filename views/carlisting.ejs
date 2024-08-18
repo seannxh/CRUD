@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST CARS LISTING</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <form action="/cars" method="POST">
+        <fieldset>
+            <legend>POST CAR 4 SALE!</legend>
+            <label>
+                CarName: <input type="text" name="carName" placeholder="Enter the Car Name" />
+            </label>
+            <br>
+            <br>
+            <label>
+                CarBrand: <input type="text" name="carBrand" placeholder="Enter the Brand" />
+            </label>
+            <br>
+            <br>
+            <label>
+                CarYear: <input type="number" name="carYear" placeholder="Enter the Year" />
+            </label>
+            <br>
+            <br>
+            <label>
+                CarTrim: <input type="text" name="carTrim" placeholder="Enter Trim" />
+            </label>
+            <br>
+            <br>
+            <label>
+                carMileage: <input type="number" name="carMileage" placeholder="Enter Mileage" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Aftermarket: <input type="checkbox" name="Aftermarket" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Image: <input type="text" name="imageUrl" placeholder="Enter the Image URL" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Price: <input type="number" name="price" />
+            </label>
+            <br>
+            <br>
+        </fieldset>
+        <br>
+        <input type="submit" value="Create New Listing" />
+    </form>
+</body>
+</html>

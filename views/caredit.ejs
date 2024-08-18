@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Listing</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <a href="/cars"?_method="PUT"><button>Go Back</button></a>
+
+
+    <form method="POST" action="/cars/<%= x._id %>?_method=PUT">
+        <fieldset>
+            <legend>Edit Car Listing</legend>
+            <label>
+                CarBrand: <input value="<%= x.carBrand %>" type="text" name="carBrand" placeholder="Edit the Brand" />
+            </label>
+            <br>
+            <br>
+            <label>
+                CarYear: <input value="<%= x.carYear %>" type="number" name="carYear" />
+            </label>
+            <br>
+            <br>
+            <label>
+                CarMileage: <input value="<%= x.carMileage %>" type="number" name="carMileage" />
+            </label>
+            <br>
+            <br>
+            <label>
+                CarTrim: <input value="<%= x.carTrim %>" type="text" name="carTrim" placeholder="Edit the Trim" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Aftermarket: 
+                <input type="checkbox" <%= x.Aftermarket ? "checked" : "" %> name="Aftermarket" />
+            </label>
+            <br>
+            <br>
+            <label>
+                Image: <input value="<%= x.imageUrl %>" type="text" name="imageUrl" placeholder="Edit the Brand" />
+            </label>
+            <br>
+            <br>
+            <img src="<%= x.imageUrl %>" alt="Car Image" style="max-width: 500px; height: 50px;" />
+            <br>
+            <br>
+            <label>
+                Price: <input value="<%= x.price %>" type="number" name="carBrand" placeholder="Edit the Price" />
+            </label>
+            <br>
+            <br>
+            <input type="submit" value="Edit Listing" />
+        </fieldset>
+    </form>
+
+
+    <form method="POST" action="/cars/<%= x._id %>?_method=DELETE">
+        <input value="Delete" type="submit">
+    </form>
+</body>
+</html>
